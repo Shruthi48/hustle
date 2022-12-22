@@ -9,7 +9,7 @@ function Login() {
    const [requestToken, setRequestToken] = useState('');
    const [api_secret_key, setApiSecretKey] = useState('');
    const [accessToken, setAccessToken] = useState('');
-   const [errorMsg, setErrorMessage] = useState('');
+  // const [errorMsg, setErrorMessage] = useState('');
 
     const handleRequestTokenGeneration  = () => {
         let kc = new KiteConnect({
@@ -30,7 +30,7 @@ function Login() {
            setAccessToken(response.access_token);
            console.log('access token', accessToken, response.access_token);
         }).catch((e) => {
-            setErrorMessage(e);
+           // setErrorMessage(e);
             console.log('error:', e)
         })
 
